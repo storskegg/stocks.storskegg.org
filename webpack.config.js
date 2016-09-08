@@ -20,6 +20,16 @@ module.exports = {
         query: {
           presets: ["es2015"],
         }
+      },
+      {
+        test: /\.scss$/,
+        include: path.join(__dirname, 'src/styles'),
+        loader: 'style-loader!css-loader!scss-loader'
+      },
+      {
+        test: /\.css$/,
+        include: path.join(__dirname, 'src/styles'),
+        loader: 'style-loader!css-loader'
       }
     ]
   },
